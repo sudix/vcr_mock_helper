@@ -13,7 +13,9 @@ defmodule VCRMockHelper.MixProject do
       name: "VCRMockHelper",
       source_url: "https://github.com/sudix/vcr_mock_helper",
       homepage_url: "https://github.com/sudix/vcr_mock_helper",
-      docs: [main: "VCRMockHelper"]
+      docs: [main: "VCRMockHelper"],
+      description: "Helper module to use ExVCR",
+      package: package()
     ]
   end
 
@@ -29,6 +31,15 @@ defmodule VCRMockHelper.MixProject do
     [
       {:exvcr, "~> 0.10", optional: true},
       {:ex_doc, "~> 0.18", only: :dev, runtime: false}
+    ]
+  end
+
+  # ライブラリのメタ情報を追加する
+  defp package do
+    [
+      maintainers: ["sudix"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/sudix/vcr_mock_helper"}
     ]
   end
 end
